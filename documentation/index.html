@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/favicon.png" rel="icon" />
+<title>Documentation | DigiKash</title>
+<meta name="description" content="DigiKash Developer Documentation">
+<meta name="author" content="coevs.com">
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+    <header id="header" class="sticky-top">
+        <!-- Navbar -->
+        <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+            <div class="container-fluid">
+
+                <!-- Sidebar Toggler for Mobile -->
+                <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
+                    <span></span><span class="w-75"></span><span class="w-50"></span>
+                </button>
+
+                <!-- Logo -->
+                <a class="logo ml-md-3" href="index.html" title="DigiKash Developer Docs">
+                    <img src="assets/images/logo.png" alt="DigiKash Logo" />
+                </a>
+                <span class="text-2 ml-2">v1.04</span>
+
+                <!-- Navbar Toggler -->
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link" href="#idocs_start">Home</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+      <div class="idocs-navigation bg-light">
+          <ul class="nav flex-column">
+
+              <!-- Getting Started -->
+              <li class="nav-item">
+                  <a class="nav-link active" href="#idocs_start">Getting Started</a>
+                  <ul class="nav flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#idocs_overview">Overview</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_requirements">Server Requirements</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_update_guide">Update Guide</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_folder_structure">Folder Structure</a></li>
+                  </ul>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link active" href="#idocs_assets_troubleshoot">Troubleshooting</a>
+              </li>
+
+
+              <!-- Authentication -->
+              <li class="nav-item">
+                  <a class="nav-link active" href="#idocs_auth">Authentication</a>
+                  <ul class="nav flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#idocs_auth">Admin Auth</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_user_auth">User/Merchant Auth</a></li>
+                  </ul>
+              </li>
+
+              <!-- Admin Panel Documentation Navigation -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#idocs_dashboard">Admin Panel Guide</a>
+                  <ul class="nav flex-column">
+
+                      <!-- Dashboard -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_dashboard">Dashboard</a></li>
+
+                      <!-- Account Management -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_users">User Management</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_merchants">Merchant Management</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_kyc">KYC Verification</a></li>
+
+                      <!-- Communication -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_notification">Notifications</a></li>
+
+                      <!-- Wallet & Finance -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_currency">Currency Settings</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_gateways">Payment Gateways</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_deposits">Deposit Management</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_withdraw">Withdrawal Management</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_referrals">Referral System</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_user_ranking">User Ranking</a></li>
+
+                      <!-- Transactions -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_transactions">Transactions Overview</a></li>
+
+                      <!-- Support Center -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_tickets">Support Tickets</a></li>
+
+                      <!-- System Configuration -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_settings">Settings Manager</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_language">Language Manager</a></li>
+
+                      <!-- Staff & Roles -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_staff">Staff Management</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_roles_permissions">Roles & Permissions</a></li>
+
+                      <!-- CMS Essentials -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_pages">Pages & Navigation</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer Management</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_seo">SEO Settings</a></li>
+
+                      <!-- Monitoring -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_logs">Activity Logs</a></li>
+
+                      <!-- Application Tools -->
+                      <li class="nav-item"><a class="nav-link" href="#idocs_style">Style Manager</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_optimize">Optimize Tools</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#idocs_profile_settings">Profile Settings</a></li>
+
+                  </ul>
+              </li>
+
+
+          </ul>
+      </div>
+
+
+      <!-- Docs Content
+      ============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+		============================ -->
+          <!-- Getting Started ============================ -->
+          <section id="idocs_start">
+              <h1>Developer Documentation</h1>
+              <h3 class="text-muted">DigiKash - Secure Payments & Advanced Merchant Gateway</h3>
+              <p class="lead">
+                  Welcome to the official developer documentation for <strong>DigiKash</strong> — a secure, scalable, and multi-functional wallet solution designed for individuals, businesses, and merchants. This guide will help you integrate, extend, and interact with DigiKash's API and merchant tools.
+              </p>
+              <hr>
+              <div class="row">
+                  <div class="col-sm-6 col-lg-4">
+                      <ul class="list-unstyled">
+                          <li><strong>Version:</strong> 1.03</li>
+                          <li><strong>License:</strong> Extended / Regular</li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-lg-4">
+                      <ul class="list-unstyled">
+                          <li><strong>Author:</strong> Coevs</li>
+                          <li><strong>Created:</strong> May 2025</li>
+                      </ul>
+                  </div>
+              </div>
+              <p class="alert alert-info mt-4">
+                  If you need support beyond this documentation, please reach out to us at
+                  <a href="mailto:support@digikash.com">contact.coevs@gmail.com</a>.
+              </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Overview ============================ -->
+          <section id="idocs_overview">
+              <h2>Overview</h2>
+              <p class="lead">
+                  <strong>DigiKash</strong> is a secure and robust wallet platform with built-in merchant gateway functionality. Designed for flexibility and scalability, it supports a wide range of financial transactions and third-party integrations.
+              </p>
+              <ul>
+                  <li><strong>Multi-Wallet System:</strong> Users can manage multiple wallets with different currencies.</li>
+                  <li><strong>Secure Transactions:</strong> Supports deposits, withdrawals, send, and request operations with full logging and protection.</li>
+                  <li><strong>Merchant Gateway API:</strong> External sites can accept payments through DigiKash using API integration.</li>
+                  <li><strong>Advanced Notification System:</strong> Real-time email, push, and SMS alerts for transactional and system events.</li>
+                  <li><strong>Webhook Support:</strong> Enables real-time status updates to merchant-integrated third-party sites when payments are made via DigiKash.</li>
+                  <li><strong>Role-Based Access:</strong> Separate admin, user, and merchant panels with granular permissions.</li>
+                  <li><strong>Developer-Friendly:</strong> Built on Laravel 11 with well-documented APIs and event-driven logic.</li>
+              </ul>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Requirements ============================ -->
+          <section id="idocs_requirements">
+              <h2>Server Requirements</h2>
+              <p class="lead">
+                  DigiKash is a Laravel-based secure wallet and merchant gateway solution. Please ensure your hosting meets the following minimum requirements for smooth and full-featured operation.
+              </p>
+
+              <h5 class="mt-4">Minimum Software Requirements</h5>
+              <ul>
+                  <li><strong>PHP Version:</strong> 8.3 or higher</li>
+                  <li><strong>Database:</strong> MySQL 8.0+ or MariaDB 10.3+</li>
+                  <li><strong>Web Server:</strong> Apache or Nginx with <code>mod_rewrite</code> support</li>
+                  <li><strong>HTTPS:</strong> SSL certificate must be enabled</li>
+              </ul>
+
+              <h5 class="mt-4">Required PHP Extensions</h5>
+              <ul>
+                  <li><code>openssl</code>, <code>pdo</code>, <code>tokenizer</code>, <code>xml</code>, <code>json</code>, <code>fileinfo</code>, <code>mbstring</code>, <code>curl</code>, <code>bcmath</code>, <code>ctype</code></li>
+                  <li><code>allow_url_fopen</code> must be enabled</li>
+              </ul>
+
+              <h5 class="mt-4">Writable Directories</h5>
+              <ul>
+                  <li><code>storage/</code> — writable (775 or 777)</li>
+                  <li><code>bootstrap/cache/</code> — writable (775 or 777)</li>
+              </ul>
+
+              <h5 class="mt-4">Laravel Features Required</h5>
+              <ul>
+                  <li><strong>Queue Worker:</strong> Must be running to send emails, push notifications, and handle real-time events.</li>
+                  <li><code>php artisan queue:work --daemon</code> (should run in background)</li>
+                  <li>If you're using cPanel, refer to Installation Guide → Step 6</li>
+              </ul>
+
+              <h5 class="mt-4">Mail Configuration</h5>
+              <ul>
+                  <li>Manage SMTP settings via: <code>/admin/settings/site → Mail Settings</code></li>
+                  <li>Supports Gmail SMTP and custom SMTP providers</li>
+              </ul>
+
+              <h5 class="mt-4">Public URLs</h5>
+              <ul>
+                  <li><strong>User Login:</strong> <code>https://yourdomain.com/login</code></li>
+                  <li><strong>User Registration:</strong> <code>https://yourdomain.com/register</code></li>
+              </ul>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Installation ============================ -->
+          <section id="idocs_installation">
+              <h2>Installation Guide (cPanel)</h2>
+              <p class="lead">
+                  This section guides you to install DigiKash on a shared hosting environment using cPanel. All required vendor and compiled files are pre-included.
+              </p>
+
+              <h5 class="mt-4">1. Upload the Script</h5>
+              <ul>
+                  <li>Login to your <strong>cPanel</strong> and open the <strong>File Manager</strong>.</li>
+                  <li>Navigate to <code>public_html/</code> or your domain root.</li>
+                  <li>Click <strong>Upload</strong> and select the <code>core.zip</code> file.</li>
+                  <li>After upload, extract the ZIP. You should see folders like <code>app/</code>, <code>public/</code>, <code>routes/</code>, etc.</li>
+              </ul>
+
+              <h5 class="mt-4">2. Create a Database</h5>
+              <ul>
+                  <li>Go to <strong>MySQL® Databases</strong> in cPanel.</li>
+                  <li>Create a new database and user, then assign the user to the database with <strong>ALL PRIVILEGES</strong>.</li>
+                  <li>Go to <strong>phpMyAdmin</strong> and import the SQL file from <code>/core/DB/digikash.sql</code>.</li>
+              </ul>
+
+              <h5 class="mt-4">3. Configure Environment Variables</h5>
+              <ul>
+                  <li>Edit <code>.env</code> with your domain and database credentials:</li>
+              </ul>
+
+              <pre><code class="env">APP_URL=https://yourdomain.com/public
+DB_HOST=localhost
+DB_DATABASE=your_db
+DB_USERNAME=your_user
+DB_PASSWORD=your_pass</code></pre>
+
+              <h5 class="mt-4">4. Set Folder Permissions</h5>
+              <pre><code class="bash">chmod -R 775 storage
+chmod -R 775 bootstrap/cache</code></pre>
+
+              <h5 class="mt-4">5. Clear Laravel Cache</h5>
+              <p>If you face a blank page or error, run this:</p>
+              <pre><code class="bash">php artisan optimize:clear</code></pre>
+
+              <h5 class="mt-4">6. Run the Queue Worker (Required)</h5>
+              <p>⚙️ Option 1: Add a Cron Job in cPanel</p>
+              <pre><code class="bash">* * * * * cd /home/your_user/public_html && php artisan queue:work --timeout=60 --tries=3 >> /dev/null 2>&1</code></pre>
+              <p>⚙️ Option 2: Run manually via SSH (if allowed)</p>
+              <pre><code class="bash">php artisan queue:work --daemon</code></pre>
+
+              <h5 class=\"mt-4\">7. Set Maintenance/Production Mode</h5>
+              <ul>
+                  <li>Go to <strong>Admin Panel → Site Settings → Maintenance Mode</strong>.</li>
+                  <li>✅ <strong>Before changing any mode:</strong> First verify that all core features (login, registration, transactions, notifications, API, etc.) are working properly.</li>
+                  <li>Set <code>Site Environment</code> to <strong>Production</strong> only after confirming everything functions correctly.</li>
+                  <li>Turn off <strong>Development Mode</strong> to improve performance, hide debug data, and enable full system security optimizations.</li>
+              </ul>
+              </ul>
+
+              <h5 class="mt-4">8. Access the Website</h5>
+              <ul>
+                  <li><strong>Frontend:</strong> <code>https://yourdomain.com</code></li>
+                  <li><strong>User Login:</strong> <code>/login</code> | <strong>Register:</strong> <code>/register</code></li>
+                  <li><strong>Admin Panel:</strong> <code>/admin</code></li>
+                  <li><strong>Default Admin Login:</strong> <code>admin@coevs.com</code> / <code>12345678</code></li>
+              </ul>
+
+              <p class="alert alert-warning mt-4">
+                  ⚠️ After installation: change the admin password, configure mail under <code>Site Settings → Mail</code>, ensure queue worker is active, and disable development mode.
+              </p>
+          </section>
+          <hr class="divider">
+
+          <!-- Update Guide: Upgrading DigiKash Safely ============================ -->
+          <section id="idocs_update_guide">
+              <h2 class="mt-5 mb-3 text-primary"><i class="fas fa-sync-alt"></i> Updating DigiKash to the Latest Version</h2>
+              <p class="lead">
+                  Follow these steps to upgrade your DigiKash installation from an older version to the latest release, while keeping your <code>storage</code> folder and <code>.env</code> settings safe.
+              </p>
+              <div class="alert alert-info border-info shadow-sm mb-4">
+                  <strong>Update Steps:</strong>
+                  <ol class="mb-0">
+                      <li>
+                          <b>Backup</b> your <code>storage</code> folder and <code>.env</code> file. <br>
+                          <span class="text-muted">These contain your app data and configuration—do not overwrite them!</span>
+                      </li>
+                      <li>
+                          <b>Replace</b> all other files and folders in your project directory with the new script files.<br>
+                          <span class="text-muted">Do <b>not</b> replace <code>storage</code> and <code>.env</code>.</span>
+                      </li>
+                      <li>
+                          Open your project terminal and run:<br>
+                          <code class="d-block bg-light p-2 my-2">php artisan migrate</code>
+                          <code class="d-block bg-light p-2 my-2">php artisan db:seed</code>
+                      </li>
+                      <li>
+                          <b>Refresh</b> your site and verify all features are working as expected.
+                      </li>
+                  </ol>
+              </div>
+              <div class="alert alert-warning border-warning shadow-sm mb-4">
+                  <strong>Having trouble with the update?</strong><br>
+                  If you encounter any errors or issues during the update process, please contact our support team:<br>
+                  <a href="mailto:contact.coevs@gmail.com" class="fw-bold">contact.coevs@gmail.com</a>
+              </div>
+              <p class="mb-0 text-muted">
+                  <i class="fas fa-info-circle"></i>
+                  Never overwrite your <code>storage</code> or <code>.env</code> files during an update. Always back up your project before starting.
+              </p>
+          </section>
+          <hr class="divider">
+
+          <!-- Folder Structure ============================ -->
+          <section id="idocs_folder_structure">
+              <h2>Folder Structure</h2>
+              <p class="lead">
+                  DigiKash follows Laravel's standard folder structure, enhanced with clean modular separation for scalability, payments, and UI components.
+              </p>
+
+              <h5 class="mt-4">Core Folders</h5>
+              <ul>
+                  <li><code>app/</code> — All core logic, services, jobs, events, and business features.
+                      <ul>
+                          <li><code>Http/Controllers</code> — Route-facing controller logic</li>
+                          <li><code>Http/Middleware</code> — Custom middlewares</li>
+                          <li><code>Http/Requests</code> — Form request validations</li>
+                          <li><code>Models</code> — Eloquent model classes</li>
+                          <li><code>Enums</code> — Enum-based constants for status, types, etc.</li>
+                          <li><code>Observers</code> — Model event handlers</li>
+                          <li><code>Payment/</code> — Structured by gateway: <code>Stripe, PayPal, Mollie, etc.</code></li>
+                          <li><code>Services</code> — Reusable service classes like currency converters, user rank, etc.</li>
+                          <li><code>Notifications</code> — System notifications (mail, SMS, push)</li>
+                          <li><code>Mail</code> — Custom mailable classes</li>
+                      </ul>
+                  </li>
+                  <li><code>routes/</code> — Web and API route files</li>
+                  <li><code>resources/views</code> — Blade views structured by <code>backend</code>, <code>frontend</code>, <code>components</code>, and <code>emails</code></li>
+                  <li><code>resources/lang</code> — Localization strings</li>
+                  <li><code>resources/structure/page_component</code> — Dynamic page component definitions</li>
+                  <li><code>config/</code> — All app-level configuration files</li>
+                  <li><code>public/</code> — Public assets and entry point (<code>index.php</code>)</li>
+                  <li><code>database/</code> — Migrations, factories, seeders</li>
+                  <li><code>storage/</code> — Logs, cached views, file uploads</li>
+                  <li><code>vendor/</code> — Composer dependencies</li>
+              </ul>
+
+              <h5 class="mt-4">Helpful Files</h5>
+              <ul>
+                  <li><code>.env</code> — App-specific environment config</li>
+                  <li><code>composer.json</code> — PHP dependencies</li>
+                  <li><code>artisan</code> — Laravel CLI entry point</li>
+                  <li><code>README.md</code> — (Optional) installation or changelog info</li>
+              </ul>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Troubleshooting: Asset/Image Not Showing ============================ -->
+          <section id="idocs_assets_troubleshoot">
+              <h2 class="mt-5 mb-3 text-danger"><i class="fas fa-exclamation-triangle"></i> Fixing Asset & Image Not Showing Issue</h2>
+              <p class="lead">
+                  If your DigiKash site is not displaying images or assets correctly, it’s likely due to a missing or broken <code>public/storage</code> symlink. This is required for Laravel to serve uploaded files and assets securely.
+              </p>
+              <div class="alert alert-warning border-warning shadow-sm mb-4">
+                  <strong>Quick Solution:</strong> <br>
+                  <ol class="mb-0">
+                      <li>
+                          <b>Delete</b> any existing <code>public/storage</code> folder (if present).
+                      </li>
+                      <li>
+                          Open your project terminal and run:<br>
+                          <code class="d-block bg-light p-2 my-2">php artisan storage:link</code>
+                      </li>
+                      <li>
+                          <b>Refresh</b> your site. Images and assets should now appear correctly.
+                      </li>
+                  </ol>
+              </div>
+              <p class="mb-0 text-muted">
+                  <i class="fas fa-info-circle"></i>
+                  This command creates a symbolic link from <code>public/storage</code> to <code>storage/app/public</code>.<br>
+                  <b>Note:</b> If you’re on shared hosting, use your control panel’s terminal or SSH access.
+              </p>
+          </section>
+          <hr class="divider">
+
+
+          <!-- Admin Authentication ============================ -->
+          <section id="idocs_auth">
+              <h2>Admin Auth</h2>
+              <p class="lead">
+                  This section explains how administrators can log in to the DigiKash backend panel securely.
+              </p>
+
+              <h5 class="mt-4">Login URL</h5>
+              <ul>
+                  <li><strong>Admin Panel URL:</strong> <code>https://yourdomain.com/admin/login</code></li>
+              </ul>
+
+              <h5 class="mt-4">Default Credentials</h5>
+              <ul>
+                  <li><strong>Email:</strong> <code>admin@coevs.com</code></li>
+                  <li><strong>Password:</strong> <code>12345678</code></li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/admin-auth.png" alt="Admin Login UI" class="img-fluid rounded ">
+              </div>
+
+              <p class="alert alert-warning">
+                  ⚠️ Make sure to change the default password immediately after logging in. For additional security, set up Two-Factor Authentication under settings.
+              </p>
+          </section>
+        
+		    <hr class="divider">
+
+          <section id="idocs_user_auth">
+              <h2>User Login</h2>
+              <p class="lead">
+                  End users and merchants can log in to their DigiKash wallet accounts using their email or username and password. The login form is designed to be clean, fast, and secure.
+              </p>
+
+              <h5 class="mt-4">Login Process</h5>
+              <ul>
+                  <li><strong>Credential Fields:</strong> Users must enter their registered email or username and password.</li>
+                  <li><strong>Password Visibility Toggle:</strong> Users can toggle password visibility for better usability.</li>
+                  <li><strong>Remember Me:</strong> Allows persistent sessions on trusted devices.</li>
+                  <li><strong>Forgot Password:</strong> Sends a password reset link to the registered email.</li>
+                  <li><strong>Sign Up:</strong> Redirects new users to the registration page.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/user-auth.png" alt="User Login UI" class="img-fluid rounded ">
+              </div>
+
+              <h5 class="mt-4">Login URL</h5>
+              <ul>
+                  <li><strong>URL:</strong> <code>https://yourdomain.com/login</code></li>
+                  <li>This login page is used for both regular users and merchant accounts.</li>
+              </ul>
+
+              <p class="alert alert-info">
+                  🔐 Always recommend enabling 2FA for added security. Admins can enforce this via user profile control.
+              </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Admin Dashboard Overview ============================ -->
+          <section id="idocs_dashboard">
+              <h2>Admin Dashboard</h2>
+              <p class="lead">
+                  The DigiKash Admin Dashboard provides a real-time overview of the system’s performance and activity. It’s designed for administrators to quickly monitor user engagement, financial transactions, and growth trends.
+              </p>
+
+              <h5 class="mt-4">Dashboard Overview</h5>
+              <p>Here's a breakdown of the dashboard components you’ll see immediately after login:</p>
+              <ul>
+                  <li><strong>User Widgets:</strong> Show stats like Total Users, Active Users, Verified/Unverified Users, and Merchants.</li>
+                  <li><strong>Transaction Widgets:</strong> Present summary amounts for Deposit, Send, Withdraw, Exchange, Reward, and Voucher actions.</li>
+                  <li><strong>Transaction Summary Chart:</strong> Graph showing trends for Deposits, Withdrawals, Payments, and Rewards.</li>
+                  <li><strong>Wallet Summary:</strong> Displays the balances of different wallet types (USD, EUR, USDT, etc.) and the number of users for each.</li>
+                  <li><strong>Daily Fee Earnings:</strong> Bar chart visualizing fee revenue growth per day.</li>
+                  <li><strong>Wallet Growth Chart:</strong> Displays how many new wallets are created daily.</li>
+                  <li><strong>Latest Transactions:</strong> Table showing recent user activities such as deposits and transfers.</li>
+                  <li><strong>Latest Registered Users:</strong> Lists the newest users with status badges and registration info.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/dashboard.png" alt="Admin Dashboard Screenshot" class="img-fluid rounded ">
+              </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- User Management ============================ -->
+          <section id="idocs_users">
+              <h2>User Management</h2>
+              <p class="lead">
+                  Admins can manage all user accounts, roles, verification statuses, and permissions directly from the user list panel. The system supports powerful filters and real-time activity data to streamline user operations.
+              </p>
+
+              <h5 class="mt-4">User List Overview</h5>
+              <p>This table view provides a searchable and filterable list of all platform users. Admins can sort by role, KYC status, and email status. Each entry includes:</p>
+              <ul>
+                  <li><strong>Name & Username:</strong> Full name with unique system handle.</li>
+                  <li><strong>Email & Verification Status:</strong> Shows whether the email is verified or unverified.</li>
+                  <li><strong>KYC Info:</strong> Document type and approval status.</li>
+                  <li><strong>Joined At / Last Login:</strong> Tracks registration and login times.</li>
+                  <li><strong>Manage Action:</strong> Direct access to view and manage user details.</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/user-list.png" alt="User Manage UI" class="img-fluid rounded  mb-4">
+              </div>
+
+              <h5 class="mt-4">User Manage Panel</h5>
+              <p>When clicking <strong>Manage</strong> on any user row, admins can access a detailed breakdown of that user’s information:</p>
+              <ul>
+                  <li><strong>Wallet Overview:</strong> List of all wallets and balances for the user.</li>
+                  <li><strong>Transaction Stats:</strong> Summarized amounts for deposit, send, withdraw, payment, etc.</li>
+                  <li><strong>Transaction Graph:</strong> Visual report showing user’s recent activity.</li>
+                  <li><strong>Tabs:</strong> Includes Info, Transactions, Referrals, Merchants (if applicable), and Activity Log.</li>
+                  <li><strong>User Access & Permissions:</strong> Enable or disable actions like send, withdraw, deposit, exchange, request.</li>
+                  <li><strong>Status Controls:</strong> Quickly toggle email verification, KYC verification, or disable account access.</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/user-manage.png" alt="User Controls UI" class="img-fluid rounded ">
+              </div>
+
+
+        <p class="alert alert-info">
+            ℹ️ You can access this section by navigating to <strong>Admin Sidebar → Users → All Users</strong> and clicking the <strong>Manage</strong> button.
+        </p>
+        </section>
+
+          <hr class="divider">
+          <section id="idocs_merchants">
+              <h2> Merchant Management</h2>
+
+              <p class="lead">This section allows the admin to manage merchant account requests and review their profile before approval.</p>
+
+              <h5 class="mt-4">Merchant List</h5>
+              <p>
+                  Admins can view a list of submitted merchant applications with filters by status and search functionality. Each merchant row shows:
+              </p>
+
+              <ul>
+                  <li><strong>Merchant Info:</strong> Logo, name, and website URL.</li>
+                  <li><strong>User:</strong> The associated user and merchant ID.</li>
+                  <li><strong>Status:</strong> Shows if the request is <code>APPROVED</code>, <code>PENDING</code>, or <code>REJECTED</code>.</li>
+                  <li><strong>Time:</strong> Submitted date and how long ago.</li>
+                  <li><strong>Action:</strong> View details or review the request.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/merchant-list.png" alt="Merchant List UI" class="img-fluid rounded ">
+              </div>
+
+              <h5 class="mt-4">Review Request Modal</h5>
+              <p>
+                  When the admin clicks the <strong>"Review Request"</strong> button, a modal appears containing full merchant information and options to approve or reject the application.
+              </p>
+
+              <ul>
+                  <li><strong>Profile Info:</strong> Displays business name, website, currency, and description.</li>
+                  <li><strong>Transaction Fee:</strong> Admin can set a fixed transaction percentage for the merchant.</li>
+                  <li><strong>Rejection Reason:</strong> Optional textarea for providing rejection feedback.</li>
+                  <li><strong>Actions:</strong> Green <code>Approve</code> and red <code>Reject</code> buttons.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/merchant-review.png" alt="Merchant Review Modal" class="img-fluid rounded ">
+              </div>
+
+              <div class="alert alert-info">
+                  🧾 You can access all merchant-related functionality from <strong>Sidebar → Merchants</strong>, including <strong>All Merchants</strong>, <strong>Pending Merchants</strong>, <strong>Approved Merchants</strong>, and <strong>Rejected Merchants</strong>.
+              </div>
+
+
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_kyc">
+              <h2>KYC Management</h2>
+              <p class="lead">
+                  The KYC (Know Your Customer) module allows administrators to manage identity verification for both users and merchants. It includes submission handling, approval workflows, and customizable KYC templates.
+              </p>
+
+              <h5 class="mt-4">KYC List</h5>
+              <p>The KYC List section provides a searchable and filterable table showing all submitted KYC requests. Each row includes the user's name, email, KYC type (e.g., NID, Passport), user type (user/merchant), and the submitted timestamp. Admins can click <strong>View</strong> to review submitted documents and take action.</p>
+
+
+              <h5 class="mt-4">KYC Templates</h5>
+              <p>This section lets admins define different KYC types for different roles. For example, <strong>NID Verify</strong> for users, and <strong>Passport Verify</strong> for both users and merchants. Each template includes a title, description, applicable roles, and status control.</p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/kyc-templates.png" alt="KYC Templates UI" class="img-fluid rounded ">
+              </div>
+
+              <h5 class="mt-4">Awaiting KYC</h5>
+              <p>Pending KYC requests appear in this section. Admins can review, approve, or reject requests using the <strong>Review Request</strong> button. The review modal includes full user information, uploaded document previews, and action options.</p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/kyc-list.png" alt="KYC Pending Review" class="img-fluid rounded ">
+              </div>
+
+              <p class="alert alert-info">
+                  🔍 You can access all KYC functionality from <strong>Sidebar → KYC Management</strong>, including List, Awaiting Requests, and Template Management.
+              </p>
+          </section>
+
+
+          <hr class="divider">
+          <section id="idocs_notification">
+              <h2>Notification Management</h2>
+              <p class="lead">
+                  DigiKash provides a dynamic notification system that allows you to manage multi-channel alerts (Email, Push, SMS) for both <strong>admin</strong> and <strong>user</strong> activities.
+              </p>
+
+              <h4 class="mt-4">Template Overview</h4>
+              <ul>
+                  <li><strong>Title & Role Tag:</strong> Identifies the notification purpose and whether it's triggered for Admin/User.</li>
+                  <li><strong>Channel Status:</strong> Enables or disables the delivery of that message through Email, Push, or SMS.</li>
+                  <li><strong>Variables:</strong> Lists placeholders like <code>{user}</code>, <code>{amount}</code> for message customization.</li>
+                  <li><strong>Manage Action:</strong> Lets you configure each template’s content and delivery options.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/notification-template.png" alt="Notification Template UI" class="img-fluid rounded ">
+              </div>
+
+              <h4 class="mt-4">Editing Notification Content</h4>
+              <p>
+                  When clicking the <strong>Manage</strong> button on a template, you can configure individual content for each channel (Email, Push, SMS).
+              </p>
+              <ul>
+                  <li><strong>Subject:</strong> Editable only for Email channel.</li>
+                  <li><strong>Message:</strong> Use supported shortcodes to personalize the message content.</li>
+                  <li><strong>Activation:</strong> Toggle switch to enable or disable channel delivery.</li>
+              </ul>
+
+              <h4 class="mt-4">System Integration</h4>
+              <p>
+                  Each notification template is automatically triggered based on system events like:
+              </p>
+              <ul>
+                  <li>KYC Submission / Approval / Rejection</li>
+                  <li>Deposit Activities (Auto/Manual/Approval)</li>
+                  <li>Withdrawal, Exchange, Reward, and more</li>
+              </ul>
+
+              <div class="alert alert-info">
+                  ℹ️ You can access this module via <strong>Sidebar → Notification</strong>, which includes:
+                  <strong>All Notifications</strong> for tracking events and
+                  <strong>Notifications Template</strong> for customizing delivery channels and message formats.
+              </div>
+
+          </section>
+
+
+          <hr class="divider">
+          <section id="idocs_currency">
+              <h2>Currency Management</h2>
+              <p class="lead">
+                  DigiKash supports a multi-currency system that allows admins to manage both fiat and crypto currencies with transaction role configuration, limits, fees, and exchange rate options.
+              </p>
+
+              <h4 class="mt-4">Currency Overview</h4>
+              <ul>
+                  <li><strong>Info:</strong> Displays currency name, code, type (FIAT or CRYPTO), and symbol.</li>
+                  <li><strong>Type & Rate:</strong> Admin can define conversion rates manually or enable live rate mode if supported.</li>
+                  <li><strong>Role:</strong> Assigns allowed transaction roles such as SEND, REQUEST, EXCHANGE, PAYMENT, etc.</li>
+                  <li><strong>Status:</strong> Activate or deactivate currency visibility in the system.</li>
+                  <li><strong>Default:</strong> One currency can be marked as default for newly registered user wallets.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/currency-list.png" alt="Currency List UI" class="img-fluid rounded  mb-4">
+              </div>
+
+              <h4 class="mt-4">Editing Currency</h4>
+              <p>
+                  By clicking the <strong>Manage</strong> button on any currency, you will access a detailed form where you can edit exchange settings, status, default flag, and role-specific configurations.
+              </p>
+              <ul>
+                  <li><strong>Currency Type:</strong> Choose between <code>FIAT</code> and <code>CRYPTO</code>.</li>
+                  <li><strong>Conversion Rate:</strong> Set manual rate or toggle live mode (requires external rate provider setup).</li>
+                  <li><strong>Transaction Roles:</strong> Each role (SEND, PAYMENT, etc.) has its own Fee, Min/Max amount, and status toggle.</li>
+                  <li><strong>Symbol & Name:</strong> Used throughout the frontend and user wallets.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/currency-manage.png" alt="Currency Manage UI" class="img-fluid rounded ">
+              </div>
+
+              <h4 class="mt-4">Role & Fee Control</h4>
+              <p>
+                  Each currency supports multiple transaction roles with individual configurations:
+              </p>
+              <ul>
+                  <li><strong>Status:</strong> Toggle role activation for this currency.</li>
+                  <li><strong>Fee:</strong> Define fixed or percentage-based transaction fees.</li>
+                  <li><strong>Limit:</strong> Control minimum and maximum transaction amounts per role.</li>
+              </ul>
+
+              <h4 class="mt-4">System Integration</h4>
+              <p>
+                  Currency settings directly affect wallet operations, exchange flows, deposit/withdraw limits, and API responses.
+                  System automatically enforces fee and limit logic based on assigned roles.
+              </p>
+              <ul>
+                  <li>Default currency is used when generating user wallets upon registration.</li>
+                  <li>Exchange logic fetches currency-to-currency rate using defined values.</li>
+                  <li>Disabled currencies are hidden from user wallet creation and exchange modules.</li>
+              </ul>
+
+              <div class="alert alert-info">
+                  💱 You can access this module via <strong>Sidebar → Currency Manage</strong>, where you can configure
+                  <strong>currency type</strong>, <strong>symbol</strong>, <strong>exchange rate</strong>, <strong>transaction roles</strong>,
+                  <strong>fee & limits</strong>, and <strong>activation status</strong>.
+              </div>
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_gateways">
+              <h2>Payment Gateway Management</h2>
+              <p class="lead">
+                  This section lets you configure all available payment gateways to support deposits and withdrawals across multiple currencies and methods.
+              </p>
+
+              <h4 class="mt-4">Gateway Overview</h4>
+              <ul>
+                  <li><strong>Logo & Name:</strong> Easily identifies the gateway (e.g., PayPal, Stripe).</li>
+                  <li><strong>Supported Currencies:</strong> Displays which currencies are supported, including fiat and crypto.</li>
+                  <li><strong>Withdraw Available:</strong> Shows if this gateway supports withdrawal flows.</li>
+                  <li><strong>Status:</strong> Indicates whether the gateway is currently enabled.</li>
+                  <li><strong>Action:</strong> Use the <strong>Manage</strong> button to configure API credentials and webhook settings.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/gateways-list.png" alt="Payment Gateway List" class="img-fluid rounded ">
+              </div>
+
+              <h4 class="mt-4">Gateway Configuration Panel</h4>
+              <p>
+                  Each gateway has its own API credential requirements. The system supports dynamic input fields depending on the selected gateway. You will typically find:
+              </p>
+
+              <ul>
+                  <li><strong>Gateway Name:</strong> Displayed at the top of the form.</li>
+                  <li><strong>Credential Fields:</strong> Dynamically rendered inputs such as:
+                      <ul>
+                          <li>Client ID / Secret</li>
+                          <li>API Key / App ID</li>
+                          <li>Merchant ID / Project Key</li>
+                      </ul>
+                  </li>
+                  <li><strong>Webhook URL:</strong> Auto-generated, read-only field specific to each gateway.</li>
+                  <li><strong>Mode:</strong> Allows toggling between <code>live</code> and <code>test/sandbox</code> environments.</li>
+                  <li><strong>Status Toggle:</strong> Enable or disable the gateway without deleting credentials.</li>
+              </ul>
+
+
+              <h4 class="mt-4">Webhook Usage</h4>
+              <p>
+                  For gateways that support automatic callbacks, DigiKash generates a secure Webhook URL. This URL should be copied into your gateway dashboard to receive real-time payment status updates.
+              </p>
+
+              <div class="alert alert-info">
+                  ℹ️ You can access this module via <strong>Sidebar → Payment Gateways</strong>, then click <strong>Manage</strong> to configure any provider. All form fields adjust automatically based on the selected gateway.
+              </div>
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_deposits">
+              <h2>Deposit Management</h2>
+              <p class="lead">
+                  The DigiKash deposit module allows users to fund their wallets via multiple methods—both automatic and manual—while providing a full admin interface to review, approve, or reject requests.
+              </p>
+
+              <h4 class="mt-4">Deposit Method Types</h4>
+              <ul>
+                  <li><strong>Automatic Methods:</strong> Gateway-based integrations (e.g., PayPal, Stripe, Mollie, etc.) where payments are validated automatically via API or IPN/Webhook.</li>
+                  <li><strong>Manual Methods:</strong> Users manually input transaction reference and payment details, then submit for admin review and approval.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/deposit-methods.png" alt="Deposit Method Overview" class="img-fluid rounded ">
+              </div>
+
+              <h4 class="mt-4">Manual Deposit Requests</h4>
+              <p>Users submit deposit requests with proof of payment. Admins can:</p>
+              <ul>
+                  <li>Review deposit amount, method, transaction ID, and sender info</li>
+                  <li>Approve or reject the request with optional remarks</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/deposit-manual.png" alt="Manual Deposit Review" class="img-fluid rounded ">
+              </div>
+
+              <h4 class="mt-4">Automatic Deposit Configuration</h4>
+              <p>Admins can create or update automated gateway deposit methods by:</p>
+              <ul>
+                  <li>Selecting a configured gateway (e.g., PayPal)</li>
+                  <li>Defining supported currency, conversion rate, min/max deposit</li>
+                  <li>Setting charge percentage and method status</li>
+              </ul>
+
+
+              <h4 class="mt-4">Custom Fields (Manual)</h4>
+              <p>Manual methods allow field customization like TX Hash, Sender ID, Notes, etc. Useful for crypto deposits or mobile transfers.</p>
+
+
+
+              <h4 class="mt-4">Deposit Logs</h4>
+              <p>Admins can track all deposits from users with full filtering options (date, method type, currency, etc.).</p>
+              <ul>
+                  <li>Status tags: <strong>Pending</strong>, <strong>Completed</strong></li>
+                  <li>Fee summary and method reference shown inline</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/deposit-history.png" alt="Deposit History UI" class="img-fluid rounded ">
+              </div>
+
+              <h4 class="mt-4">Access Location</h4>
+              <div class="alert alert-info">
+                  📥 Access full deposit configuration from <strong>Sidebar → Deposit</strong>, including:
+                  <strong>Manual Requests</strong>, <strong>Automatic Methods</strong>, <strong>Manual Methods</strong>, and <strong>Deposit History</strong>.
+              </div>
+          </section>
+
+          <hr class="divider">
+
+          <section id="idocs_withdraw">
+              <h2>Withdraw Management</h2>
+              <p class="lead">
+                  The withdraw module in DigiKash provides a streamlined and secure system to manage manual and automatic withdrawal methods, including scheduled payouts and full transactional history.
+              </p>
+
+              <h4 class="mt-4">Manual Withdraw Requests</h4>
+              <p>
+                  Admins can view all pending manual withdrawal requests from users. Each request shows the transaction ID, amount, fee, method, time, and user details. Review, approve, or reject with optional remarks.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/withdraw-manual-request.png" alt="Manual Withdraw Requests UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Automatic Withdraw Methods</h4>
+              <p>
+                  Configure gateways for automatic withdrawals such as PayPal, Stripe, or Crypto. Each method can be enabled with min/max limits, static or live rate, and associated fees.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/withdraw-auto-methods.png" alt="Automatic Withdraw Methods" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Manual Withdraw Methods</h4>
+              <p>
+                  Create custom methods like bank transfers. Add instructions, fee details, and required fields (e.g., bank name, account number).
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/withdraw-manual-methods.png" alt="Manual Withdraw Methods" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Scheduled Withdrawals</h4>
+              <p>
+                  Automate withdrawal processing by enabling specific days of the week for payout execution.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/withdraw-schedule.png" alt="Scheduled Withdrawals" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Withdraw History</h4>
+              <p>
+                  View all withdrawal transactions with statuses like pending, completed, or rejected. Filters allow date and status-based sorting.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/withdraw-history.png" alt="Withdraw History" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Navigation Tip</h4>
+              <div class="alert alert-info">
+                  💸 You can access all withdraw features via <strong>Sidebar → Withdraw</strong>, including <strong>Manual Requests</strong>, <strong>Automatic Methods</strong>, <strong>Manual Methods</strong>, <strong>Scheduled Withdrawals</strong>, and <strong>Withdraws History</strong>.
+              </div>
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_referrals">
+              <h2>Referral Management</h2>
+              <p class="lead">
+                  DigiKash allows you to set up and manage multi-level referral reward systems for both deposit and payment activities. You can define tiered reward levels and toggle them on or off globally.
+              </p>
+
+              <h4 class="mt-4">Reward Structure</h4>
+              <ul>
+                  <li><strong>Deposit Rewards:</strong> Earned when a referred user deposits funds. Rewards are tiered by level (e.g., 10% for Level 1).</li>
+                  <li><strong>Payment Rewards:</strong> Earned when a referred user makes a payment. Tiered by referral level similarly.</li>
+                  <li><strong>Level:</strong> The hierarchy of referrals (Level 1 = direct, Level 2 = indirect, etc.).</li>
+                  <li><strong>Reward %:</strong> The percentage of transaction value shared as a referral reward.</li>
+                  <li><strong>Toggle Switch:</strong> Enable or disable rewards globally per reward type.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/referral-settings.png" alt="Referral Rewards UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Editing and Managing</h4>
+              <p>You can add or modify referral reward levels using the buttons provided:</p>
+              <ul>
+                  <li><strong>Edit (✏️):</strong> Opens a modal to update the reward percentage for a given level.</li>
+                  <li><strong>Delete (🗑️):</strong> Permanently removes that reward level from the program.</li>
+                  <li><strong>Add New:</strong> Allows you to define a new referral level and reward value.</li>
+              </ul>
+
+              <h4 class="mt-4">Use Case Example</h4>
+              <pre><code class="language-html">
+  &lt;!-- Referral Example --&gt;
+  User A refers User B
+  User B deposits $100 → User A (Level 1) gets 10% → $10
+
+  User B refers User C
+  User C pays $200 → User B (Level 1) gets 10% → $20
+                    User A (Level 2) gets 2% → $4
+  </code></pre>
+
+              <div class="alert alert-info">
+                  🔗 You can access this module via <strong>Sidebar → Referrals</strong> to manage both <strong>Deposit Rewards</strong> and <strong>Payment Rewards</strong> in a multi-level hierarchy.
+              </div>
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_user_ranking">
+              <h2>User Ranking Management</h2>
+              <p class="lead">
+                  DigiKash features a tier-based User Ranking system that enables role-specific rewards and access control based on users’ total transaction volume. Admins can manage how users move up ranks and what each rank offers.
+              </p>
+
+              <h4 class="mt-4">Rank Structure Overview</h4>
+              <ul>
+                  <li><strong>Transaction Amount:</strong> Minimum amount a user must transact to qualify for the rank.</li>
+                  <li><strong>Rank Reward:</strong> Bonus (in USD or other units) awarded when reaching this rank.</li>
+                  <li><strong>Transaction Types Allowed:</strong> Each rank can restrict or allow specific actions like Deposit, Payment, Send Money, Referral Reward, etc.</li>
+                  <li><strong>Max Wallets:</strong> Limits how many wallets a user in this rank can create.</li>
+                  <li><strong>Max Referral Level:</strong> Determines how deep this user can earn from their referral network.</li>
+                  <li><strong>Status Toggle:</strong> Enables or disables the rank.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/user-rank-list.png" alt="User Rank List UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Creating or Editing a Rank</h4>
+              <p>
+                  Click the <strong>Add New</strong> button or <strong>Manage</strong> an existing rank to update the configuration.
+              </p>
+              <ul>
+                  <li><strong>Icon Upload:</strong> Add a custom visual identifier per rank.</li>
+                  <li><strong>Name & Description:</strong> Provide context and rank-specific messaging.</li>
+                  <li><strong>Transaction/Reward Inputs:</strong> Numeric fields to set thresholds and benefits.</li>
+                  <li><strong>Allowed Transaction Types:</strong> Toggle permissions by feature.</li>
+                  <li><strong>Status:</strong> Use the switch to activate or deactivate a rank at any time.</li>
+              </ul>
+
+
+              <h4 class="mt-4">Use Case Example</h4>
+              <pre><code class="language-html">
+  <!-- Rank Promotion Example -->
+  User A has total transactions: $550
+  → User qualifies for "Silver" rank
+  → Gets 10 USD as reward
+  → Gains access to Send Money + Referral Reward
+  </code></pre>
+
+              <div class="alert alert-info">
+                  🧭 Access this module via <strong>Sidebar → User Ranking</strong> to manage levels, transaction thresholds, allowed features, and associated rewards.
+              </div>
+          </section>
+
+
+          <hr class="divider">
+          <section id="idocs_transactions">
+              <h2>Transaction History</h2>
+              <p class="lead">
+                  DigiKash provides a comprehensive transaction ledger where admins can monitor all user financial activities—such as deposits, withdrawals, exchanges, requests, and voucher operations—in a unified view.
+              </p>
+
+              <h4 class="mt-4">Transaction Table Overview</h4>
+              <ul>
+                  <li><strong>User | TXN ID:</strong> Displays the user’s name and the unique transaction reference ID.</li>
+                  <li><strong>Amount | Type:</strong> Shows the credited/debited amount with corresponding transaction type (Deposit, Withdraw, Exchange, etc.).</li>
+                  <li><strong>Description | Provider:</strong> Indicates the operation details and provider used (e.g., Bank, Wallet, System).</li>
+                  <li><strong>Status:</strong> Indicates if the transaction is <code>Completed</code>, <code>Pending</code>, or <code>Cancelled</code>.</li>
+                  <li><strong>Time:</strong> Records the date and time when the transaction was initiated.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/transactions-table.png" alt="Transaction History UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Filter & Search Options</h4>
+              <ul>
+                  <li><strong>Date Range:</strong> Filter transactions by specific date periods.</li>
+                  <li><strong>Transaction Type:</strong> Narrow results by action types such as Withdraw, Deposit, Exchange, etc.</li>
+                  <li><strong>Status Filter:</strong> View transactions based on status (Completed, Pending, Cancelled).</li>
+                  <li><strong>Search Box:</strong> Search by user name, transaction ID, or keywords.</li>
+              </ul>
+
+              <h4 class="mt-4">Use Case Example</h4>
+              <pre><code class="language-html">
+  <!-- Transaction Scenario -->
+  User A withdraws $100 via Bank Transfer
+  → Admin sees:
+     - TXN ID: TXNNPMIOR9EROWT
+     - Type: Withdraw
+     - Amount: 100 USD
+     - Fee: $25
+     - Status: Pending
+  </code></pre>
+
+              <div class="alert alert-info">
+                  📋 Access this module via <strong>Sidebar → Transactions</strong> to review, search, and analyze all user-related transactions in real-time.
+              </div>
+          </section>
+
+
+          <hr class="divider">
+          <section id="idocs_tickets">
+              <h2>Support Ticket System</h2>
+              <p class="lead">
+                  DigiKash includes a fully-featured support ticket system to streamline user queries, complaints, or service requests. Tickets can be filtered by status and assigned to categories for proper resolution tracking.
+              </p>
+
+              <h4 class="mt-4">Ticket Workflow</h4>
+              <ul>
+                  <li><strong>Pending Ticket:</strong> New requests submitted by users awaiting initial admin response.</li>
+                  <li><strong>In Progress Ticket:</strong> Tickets currently being handled by support/admin team.</li>
+                  <li><strong>Close Ticket:</strong> Resolved requests archived for future reference.</li>
+                  <li><strong>All Ticket:</strong> Central place to view tickets across all statuses.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/ticket-status-tabs.png" alt="Ticket Tabs UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Ticket Details View</h4>
+              <p>
+                  Clicking <strong>Support Now</strong> opens the ticket conversation. The support admin can reply, attach files, and track ticket history.
+              </p>
+              <ul>
+                  <li><strong>Ticket ID:</strong> Unique identifier of the issue (e.g., #ZIVWBAW).</li>
+                  <li><strong>Priority:</strong> Visual tag to mark urgency (e.g., High, Medium, Low).</li>
+                  <li><strong>Message Thread:</strong> Admin and user messages are grouped chronologically.</li>
+                  <li><strong>Attach Files:</strong> Button available for adding images or documents for clarification.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/support-ticket-detail.png" alt="Ticket Details" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Support Category Management</h4>
+              <p>
+                  Administrators can define categories for tickets (e.g., Wallet, Transaction, General) from the <strong>Support Category</strong> menu to help classify and route requests efficiently.
+              </p>
+
+              <h4 class="mt-4">Use Case Example</h4>
+              <pre><code class="language-html">
+<!-- Support Ticket Lifecycle -->
+1. User submits ticket: "Deposit not reflected"
+2. Ticket enters "Pending" state.
+3. Admin reviews and responds, updates to "In Progress".
+4. After resolving, Admin marks it "Closed".
+5. Ticket remains in "All Tickets" for record keeping.
+  </code></pre>
+
+              <div class="alert alert-info mt-4">
+                  🛠️ Access this module from <strong>Sidebar → Support Ticket</strong>, which includes all statuses (Pending, In Progress, Close, All) and the <strong>Support Category</strong> manager.
+              </div>
+          </section>
+
+
+           <hr class="divider">
+          <section id="idocs_settings">
+              <h2>Site Settings Management</h2>
+              <p class="lead">
+                  The <strong>Site Settings</strong> module lets you configure all essential aspects of your DigiKash application, including branding, security, maintenance, email, cookies, and plugin integrations, directly from an intuitive admin panel.
+              </p>
+
+              <div class="text-center my-3">
+                  <img src="assets/images/backend/settings.png" alt="Site General Settings UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">General Settings</h4>
+              <ul>
+                  <li><strong>Logo, Light Logo, Small Logo:</strong> Upload logos for different theme contexts.</li>
+                  <li><strong>Favicon & Login Banner:</strong> Set branding for browser tabs and login page.</li>
+                  <li><strong>Site Title, Admin Prefix, Home Redirect:</strong> Define core site identity and routing.</li>
+                  <li><strong>Timezone, Support Email/Phone:</strong> Set global timezone and contact info for notifications and system use.</li>
+                  <li><strong>Copyright Text:</strong> Set legal/copyright footer for the application.</li>
+              </ul>
+
+              <h4 class="mt-4">Security Settings</h4>
+              <ul>
+                  <li><strong>Force HTTPS:</strong> Require secure connections (recommended for production).</li>
+                  <li><strong>Screen Lock:</strong> Set auto-lock interval for admin/user inactivity.</li>
+                  <li><strong>Max Upload Size:</strong> Limit file upload size globally.</li>
+                  <li><strong>Duplicate Submission Lock:</strong> Prevents duplicate form submissions by time interval.</li>
+              </ul>
+
+              <h4 class="mt-4">Maintenance Mode</h4>
+              <ul>
+                  <li><strong>Enable/Disable Maintenance:</strong> Temporarily put the site offline with a customizable message and cover image.</li>
+                  <li><strong>Secret Key:</strong> Used to unlock the site during maintenance mode.</li>
+                  <li><strong>Site Environment & Development Mode:</strong> Toggle between Production and Development for debugging or updates.</li>
+              </ul>
+
+              <h4 class="mt-4">Mail Settings</h4>
+              <ul>
+                  <li><strong>Email From Name & Address:</strong> Customize sender details for outgoing emails.</li>
+                  <li><strong>SMTP Credentials:</strong> Enter mail host, username, password, port, and encryption (TLS/SSL).</li>
+                  <li><strong>SMTP Connection Test:</strong> Verify your email settings before saving.</li>
+              </ul>
+
+              <h4 class="mt-4">Cookie Settings</h4>
+              <ul>
+                  <li><strong>Enable Cookie Consent:</strong> Activate and customize a cookie consent banner for compliance.</li>
+                  <li><strong>Cookie Title & Summary:</strong> Set the display message and summary for users.</li>
+                  <li><strong>Cookie Page URL:</strong> Link to your full cookie/privacy policy.</li>
+              </ul>
+
+              <h4 class="mt-4">Plugin Management</h4>
+              <ul>
+                  <li><strong>Manage Integrations:</strong> Activate/deactivate and configure popular plugins (reCAPTCHA, Analytics, Chat, IPInfo, etc.).</li>
+                  <li><strong>Notifications & Exchange Rates:</strong> Configure plugins for SMS, push, and currency rates.</li>
+              </ul>
+
+              <div class="alert alert-info mt-4">
+                  ⚙️ Access all settings from <strong>Sidebar → Settings</strong>. Each section has tabbed navigation and instant save actions for efficient configuration.
+              </div>
+          </section>
+
+
+           <hr class="divider">
+          <section id="idocs_language">
+              <h2>Languages Management</h2>
+              <p class="lead">
+                  DigiKash supports multi-language management, enabling you to add, edit, or remove languages and localize your platform for global audiences. Effortlessly set your default language and synchronize translation strings as your application grows.
+              </p>
+
+              <h4 class="mt-4">Language List Overview</h4>
+              <ul>
+                  <li><strong>Flag:</strong> Visual indicator for each language.</li>
+                  <li><strong>Name & Code:</strong> Display language name and ISO code (e.g., <code>en</code> for English).</li>
+                  <li><strong>Default:</strong> Set the default language for the application (one active at a time).</li>
+                  <li><strong>Status:</strong> Toggle whether the language is active and available for users.</li>
+                  <li><strong>Actions:</strong> Edit translations, configure language settings, or delete a language.</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/languages-manage.png" alt="Languages Management UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Key Features</h4>
+              <ul>
+                  <li><strong>Add New:</strong> Easily add a new language by specifying the name, code, and uploading a flag.</li>
+                  <li><strong>Edit Translations:</strong> Update translation strings for each language. Use the dedicated editor for consistency.</li>
+                  <li><strong>Sync Missing Translation:</strong> Automatically detect and add missing translation keys for new features or modules.</li>
+                  <li><strong>Activate/Deactivate:</strong> Enable or disable languages without removing them from the database.</li>
+                  <li><strong>Delete:</strong> Remove a language entirely (except the default).</li>
+              </ul>
+
+              <h4 class="mt-4">Example Use Case</h4>
+              <pre><code class="language-html">
+  &lt;!-- Language Management Example --&gt;
+  1. Add Spanish (es) as a new language.
+  2. Use the editor to translate all keys for the Spanish locale.
+  3. Sync missing translations after a system update.
+  4. Set Spanish as the default language if needed.
+  </code></pre>
+
+              <div class="alert alert-info mt-4">
+                  🌎 Access this module from <strong>Sidebar → Languages</strong> to manage localization and ensure a seamless user experience for all supported languages.
+              </div>
+          </section>
+
+
+           <hr class="divider">
+          <section id="idocs_staff">
+              <h2>Staff Management</h2>
+              <p class="lead">
+                  Manage your platform's team members, assign roles, and control their access with DigiKash's robust staff management module.
+              </p>
+
+              <h4 class="mt-4">Overview</h4>
+              <ul>
+                  <li><strong>Avatar:</strong> Each staff profile includes an avatar for easy identification.</li>
+                  <li><strong>Info:</strong> Displays the staff member's name and email address.</li>
+                  <li><strong>Role:</strong> Assign staff-specific roles such as Finance Manager, KYC Officer, Super Admin, or Support Executive.</li>
+                  <li><strong>Status:</strong> Indicates whether the staff member is active.</li>
+                  <li><strong>Actions:</strong> Manage (edit) staff information or add new staff via the "Add New" button.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/staff-list.png" alt="Staffs Management UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Add/Edit Staff</h4>
+              <ul>
+                  <li><strong>Avatar:</strong> Upload a profile image for the staff member.</li>
+                  <li><strong>Staff Name &amp; Email:</strong> Enter their name and email address.</li>
+                  <li><strong>Password:</strong> Set or update a secure password for staff login.</li>
+                  <li><strong>Role Selection:</strong> Assign a role from predefined options (e.g., Finance Manager, KYC Officer).</li>
+                  <li><strong>Status:</strong> Enable or disable staff access.</li>
+                  <li><strong>Update Staff:</strong> Save changes to staff information.</li>
+              </ul>
+
+
+              <h4 class="mt-4">Use Case Example</h4>
+              <pre><code class="language-html">
+&lt;!-- Example: Adding a New KYC Officer --&gt;
+1. Click "Add New".
+2. Fill in details: Name = "Jane Doe", Email = "kyc@digikash.com".
+3. Select role: KYC Officer.
+4. Set a secure password.
+5. Toggle status to Active.
+6. Click "Save" to add Jane as a new KYC Officer.
+    </code></pre>
+
+              <div class="alert alert-info">
+                  👥 Access the <strong>Staff Management</strong> module from <strong>Sidebar → Staffs</strong> to add, update, or deactivate team members and assign platform roles efficiently.
+              </div>
+          </section>
+
+
+           <hr class="divider">
+          <section id="idocs_roles_permissions">
+              <h2>Roles &amp; Permissions Management</h2>
+              <p class="lead">
+                  Manage staff access and platform security with a robust roles and permissions system. Assign roles with precise control over features and actions available to each staff group.
+              </p>
+
+              <h4 class="mt-4">Overview</h4>
+              <ul>
+                  <li><strong>Role Assignment:</strong> Assign roles to staff for streamlined access control (e.g., Super Admin, Finance Manager, Support Executive, KYC Officer).</li>
+                  <li><strong>Permissions:</strong> Each role has customizable permissions. Enable or disable access to features like dashboard stats, user management, merchant configs, financial modules, and more.</li>
+                  <li><strong>Protected Roles:</strong> Core roles such as Super Admin are protected from deletion for system integrity.</li>
+                  <li><strong>Role Actions:</strong> Roles can be edited or removed (except protected roles). Staff can only access areas and perform actions based on assigned permissions.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/roles-permissions-list.png" alt="Roles and Permissions Management" class="img-fluid rounded shadow mb-3">
+                  <img src="assets/images/backend/roles-permissions-edit.png" alt="Role Permissions Edit" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Managing Roles</h4>
+              <ul>
+                  <li><strong>Add New Role:</strong> Click "Add New" to create a new role. Specify a name, description, and assign permissions by module/category.</li>
+                  <li><strong>Edit Role:</strong> Use the "Manage" button to update permissions, description, or reassign modules for an existing role.</li>
+                  <li><strong>Delete Role:</strong> Non-protected roles can be deleted if not required.</li>
+              </ul>
+
+              <h4 class="mt-4">Best Practice Example</h4>
+              <pre><code class="language-json">
+// Example: Creating a Finance Manager Role with Permissions
+{
+  "role": "Finance Manager",
+  "permissions": {
+    "dashboard_stats": true,
+    "transactions_chart": false,
+    "wallet_balance": true,
+    "user_management": false,
+    "merchant_management": true,
+    "kyc_review": false,
+    "deposit_withdrawal": true
+  }
+}
+  </code></pre>
+
+              <div class="alert alert-info">
+                  🔑 Access Roles &amp; Permissions from <strong>Sidebar &rarr; Roles &amp; Permissions</strong> to securely manage staff privileges and enforce least-privilege access across the platform.
+              </div>
+          </section>
+
+
+           <hr class="divider">
+          <section id="idocs_pages">
+              <h2>Page & Navigation Management</h2>
+              <p class="lead">
+                  DigiKash provides a powerful and intuitive interface for managing site navigation, static/dynamic pages, and reusable page components. This enables you to create, organize, and optimize the site's content structure for the best user experience and SEO.
+              </p>
+
+              <h4 class="mt-4">Navigation Manager</h4>
+              <ul>
+                  <li><strong>Navigation List:</strong> View, reorder (drag & drop), activate/deactivate, and edit navigation items for your site’s main menus.</li>
+                  <li><strong>Type & Target:</strong> Assign menu items to internal pages (e.g., Home, Blog) or custom URLs and select open behavior (same tab/new tab).</li>
+                  <li><strong>Status & Actions:</strong> Activate/deactivate navigation entries and use <b>Edit</b>/<b>Delete</b> for management.</li>
+                  <li><strong>Bulk Add:</strong> Use <b>+Add New</b> to create new menu items efficiently.</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/navigation-manager.png" alt="Navigation Manager UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Page Manager</h4>
+              <ul>
+                  <li><strong>Static & Dynamic Pages:</strong> List, create, and manage all pages—both static (with fixed content) and dynamic (component-based, such as Blog).</li>
+                  <li><strong>SEO Management:</strong> Built-in SEO tools to manage titles, meta descriptions, and slugs for better search engine visibility.</li>
+                  <li><strong>Component Count:</strong> Instantly see how many content components each page uses.</li>
+                  <li><strong>Status & Actions:</strong> Activate/deactivate, manage, protect, or delete pages as required. Home and Blog are protected by default.</li>
+                  <li><strong>Multi-language:</strong> Support for localized page titles and content (see <b>Language Management</b>).</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/page-manager.png" alt="Page Manager UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Component Manager</h4>
+              <ul>
+                  <li><strong>Reusable Components:</strong> Manage visual/content blocks such as Banners, Features, Services, Testimonials, Blog, etc.</li>
+                  <li><strong>Type:</strong> <code>static</code> for fixed sections (e.g., About, Feature), <code>dynamic</code> for data-driven (e.g., Blog).</li>
+                  <li><strong>Status & Actions:</strong> Enable/disable components or manage their settings.</li>
+                  <li><strong>Protection:</strong> Some components (e.g., Blog Standard) are protected from deletion for core functionality.</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/component-manager.png" alt="Component Manager UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Editing & Building Pages</h4>
+              <ul>
+                  <li><strong>Add/Remove Components:</strong> Easily add, configure, and reorder blocks on any page with a simple click interface.</li>
+                  <li><strong>Breadcrumbs & Status:</strong> Toggle page breadcrumbs for navigation trails and activate/deactivate the page in one click.</li>
+                  <li><strong>Multi-language Support:</strong> Enter content for multiple languages in tabbed form fields.</li>
+                  <li><strong>Live Preview:</strong> Changes reflect instantly for rapid page prototyping.</li>
+              </ul>
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/page-edit.png" alt="Edit Page UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Example Use Case</h4>
+              <pre><code class="language-html">
+<!-- Adding a New Page -->
+1. Click "Create Page" and provide a title, slug, and status.
+2. Add desired components from the list: e.g., Banner, Feature, Blog.
+3. Configure each component (content, images, settings).
+4. Use the SEO Manager to define meta tags.
+5. Save changes—page appears in Navigation Manager if linked.
+    </code></pre>
+              <div class="alert alert-info">
+                  🔗 Access via <strong>Sidebar → Navigation Manage</strong> and <strong>Sidebar → Pages</strong> to create, organize, and optimize all site content.
+              </div>
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_footer">
+              <h2>Footer Management</h2>
+              <p class="lead">
+                  The DigiKash Footer Manager allows you to create, organize, and manage multiple footer sections and items, enabling you to customize your site's footer for enhanced navigation and legal compliance.
+              </p>
+
+              <h4 class="mt-4">Sections & Item Types</h4>
+              <ul>
+                  <li><strong>Section Title:</strong> The main label for a footer group (e.g., About, Useful Links, Social Link).</li>
+                  <li><strong>Type:</strong> Define whether the section contains static text, links to pages, or social/media links.</li>
+                  <li><strong>Total Item:</strong> The number of links/items under each section.</li>
+                  <li><strong>Status:</strong> Toggle each section’s visibility in the footer.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/footer-manage.png" alt="Footer Management UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Editing and Managing Sections</h4>
+              <ul>
+                  <li><strong>Edit:</strong> Modify section details such as title, type, or status.</li>
+                  <li><strong>Item Manage:</strong> Manage the individual links/items within a section (e.g., Privacy Policy, Terms & Conditions).</li>
+                  <li><strong>Delete:</strong> Remove the entire section or individual items.</li>
+                  <li><strong>Add New:</strong> Create a new footer section or add new items to an existing section.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/footer-item-manage.png" alt="Footer Item Management UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Use Case Example</h4>
+              <pre><code class="language-html">
+&lt;!-- Example: Adding an Internal Page Link --&gt;
+Footer Section: Useful Links
+    └─ Privacy Policy [Internal Page | Active]
+    └─ Terms & Conditions [Internal Page | Active]
+
+Footer Section: Social Link
+    └─ Facebook [External Link | Active]
+    └─ Twitter [External Link | Active]
+    </code></pre>
+
+              <div class="alert alert-info">
+                  📁 Access <strong>Footer Management</strong> via <strong>Sidebar → Footer Manage</strong> to fully control your site's footer links, legal notices, and social links for better UX and SEO.
+              </div>
+          </section>
+
+
+          <hr class="divider">
+          <section id="idocs_seo">
+              <h2>SEO Management</h2>
+              <p class="lead">
+                  Manage global and per-page SEO settings to optimize DigiKash’s visibility across search engines. Easily set meta tags, descriptions, canonical URLs, robot directives, and SEO images for each page in multiple languages.
+              </p>
+
+              <h4 class="mt-4">Features</h4>
+              <ul>
+                  <li><strong>Global SEO:</strong> Set default meta tags, description, and image for the entire site. This applies to all pages unless overridden.</li>
+                  <li><strong>Page-specific SEO:</strong> Assign unique SEO data for individual pages, including title, meta description, keywords, and canonical URL.</li>
+                  <li><strong>Multi-language support:</strong> Configure SEO fields in multiple languages for each page.</li>
+                  <li><strong>Robots Directive:</strong> Control how search engines index and follow your pages (e.g., <span class="badge bg-success text-white">Index, Follow</span>).</li>
+                  <li><strong>SEO Images:</strong> Upload an Open Graph image for each page to improve sharing appearance on social media.</li>
+                  <li><strong>SEO Management UI:</strong> Add, edit, or remove SEO data with a clean, user-friendly interface.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/seo-management.png" alt="SEO Management UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">How to Use</h4>
+              <ol>
+                  <li>Go to <strong>SEO Management</strong> from the sidebar.</li>
+                  <li>To set global SEO, click <strong>Manage SEO</strong> on the <span class="badge bg-primary text-white">Global SEO</span> row.</li>
+                  <li>To configure SEO for a specific page, click <strong>Add SEO</strong> or <strong>Manage SEO</strong> next to the desired page.</li>
+                  <li>Fill in the required fields:
+                      <ul>
+                          <li><strong>Meta Title</strong>: Main title shown in search results.</li>
+                          <li><strong>Meta Description</strong>: Brief summary for search engines.</li>
+                          <li><strong>Meta Keywords</strong>: Optional keywords for SEO (comma-separated or tags).</li>
+                          <li><strong>Canonical URL</strong>: Preferred URL for the page to avoid duplicate content issues.</li>
+                          <li><strong>Robots Directive</strong>: Choose <strong>Index, Follow</strong> or <strong>NoIndex, NoFollow</strong> as needed.</li>
+                          <li><strong>SEO Image</strong>: Optional Open Graph image for rich link sharing (recommended size: 1200x630px).</li>
+                      </ul>
+                  </li>
+                  <li>Switch between language tabs to localize SEO data as needed.</li>
+                  <li>Click <strong>Save Changes</strong> to apply.</li>
+              </ol>
+
+              <h4 class="mt-4">Example</h4>
+              <pre><code class="language-json">
+{
+  "meta_title": "Digikash – Secure & Fast Digital Wallet for Easy Payments",
+  "meta_description": "Digikash is your trusted digital wallet solution offering instant money transfers, secure online payments, and seamless transactions worldwide.",
+  "meta_keywords": [
+    "digikash",
+    "digital wallet",
+    "send money",
+    "receive money",
+    "online payment",
+    "fast transfer",
+    "secure wallet",
+    "wallet app"
+  ],
+  "canonical_url": "https://yourdigikash.com",
+  "robots_directive": "Index, Follow",
+  "seo_image": "/assets/seo/og-digikash.png"
+}
+  </code></pre>
+
+              <div class="alert alert-info">
+                  Access SEO Management via <strong>Sidebar → SEO</strong>. For best results, keep titles concise, use relevant keywords, and always provide a meta description.
+              </div>
+          </section>
+
+
+          <hr class="divider">
+          <section id="idocs_logs">
+              <h2>Activity Logs</h2>
+              <p class="lead">
+                  The Activity Logs module provides a complete history of user and merchant login activities for DigiKash, including timestamp, IP address, location, browser, and device details. This helps administrators track platform access for security and auditing.
+              </p>
+
+              <h4 class="mt-4">Key Features</h4>
+              <ul>
+                  <li><strong>Detailed Login History:</strong> View every login event by user or merchant, including name, email, user type, and role badge.</li>
+                  <li><strong>IP & Geolocation:</strong> Shows the IP address and country for each login, with quick IP lookup.</li>
+                  <li><strong>Browser & Platform Info:</strong> Captures browser type and OS (e.g., <strong>Chrome</strong>, <strong>Windows</strong>, <strong>Edge</strong>).</li>
+                  <li><strong>Date Range & Filtering:</strong> Easily filter logs by date, user type (User, Merchant, Admin), or search by name or IP.</li>
+                  <li><strong>Relative & Absolute Time:</strong> Shows both exact login timestamps and relative time (e.g., <code>13 hours ago</code>).</li>
+                  <li><strong>Quick Insights:</strong> Quickly identify suspicious login patterns, repeated access from the same IP, or activity from unusual locations.</li>
+              </ul>
+
+              <div class="text-center my-4">
+                  <img src="assets/images/backend/activity-logs.png" alt="Activity Logs UI" class="img-fluid rounded shadow">
+              </div>
+          </section>
+
+          <hr class="divider">
+          <section id="idocs_style">
+              <h2>Custom Style Manager</h2>
+              <p class="lead">
+                  The Custom Style Manager allows administrators to inject custom CSS into DigiKash, enabling full control over the appearance of the platform without modifying core files. Custom styles override the default design and are added to the site's <code>&lt;head&gt;</code> tag.
+              </p>
+
+              <h4 class="mt-4">Key Features</h4>
+              <ul>
+                  <li><strong>Live Custom CSS Editor:</strong> Write and edit your own CSS in a syntax-highlighted editor directly from the admin panel.</li>
+                  <li><strong>Real-time Overrides:</strong> Changes are instantly reflected on the site once activated, making it easy to fine-tune branding and layout.</li>
+                  <li><strong>Activation Toggle:</strong> Instantly enable or disable custom styles with a single switch—no need to remove code.</li>
+                  <li><strong>Safe & Isolated:</strong> Custom styles are sandboxed and never affect core or update files.</li>
+              </ul>
+
+              <div class="alert alert-info">
+                  <strong>Important:</strong> Your custom CSS will be injected into the site’s <code>&lt;head&gt;</code>. These styles will override default DigiKash styling.
+              </div>
+
+              <div class="my-4">
+                  <img src="assets/images/backend/custom-style-manager.png" alt="Custom Style Manager UI" class="img-fluid rounded shadow">
+              </div>
+
+              <h4 class="mt-4">Example Usage</h4>
+              <pre><code class="language-css">
+// The Custom CSS will be added on the site head tag
+.site-head-tag {
+    margin: 0;
+    padding: 0;
+}
+  </code></pre>
+
+              <h4 class="mt-4">How to Use</h4>
+              <ol>
+                  <li>Go to <strong>Settings → Custom Style Manager</strong> in the admin dashboard.</li>
+                  <li>Enter your CSS rules in the editor panel.</li>
+                  <li>Toggle the <strong>Active</strong> switch to apply or disable custom styles globally.</li>
+                  <li>Click <strong>Update Now</strong> to save and apply your changes.</li>
+              </ol>
+
+              <h4 class="mt-4">Best Practices</h4>
+              <ul>
+                  <li>Keep your custom CSS concise and well-commented for easy management.</li>
+                  <li>Avoid excessive overrides to prevent UI conflicts after system updates.</li>
+                  <li>Test on all major devices/browsers before activating new styles.</li>
+              </ul>
+          </section>
+
+
+
+          <hr class="divider">
+          <section id="idocs_optimize">
+              <h2>App Optimization & Cache Management</h2>
+              <p class="lead">
+                  The <strong>Optimize App</strong> module in DigiKash provides essential tools for maintaining peak performance and resolving common issues. Admins can quickly optimize core caches and clear outdated data to ensure the platform runs smoothly.
+              </p>
+
+              <h4 class="mt-4">Available Actions</h4>
+              <ul>
+                  <li>
+                      <strong>Optimize App:</strong> Rebuilds and optimizes configuration, route, and view caches for improved speed and reliability. This action runs the equivalent of <code>php artisan optimize</code>.
+                  </li>
+                  <li>
+                      <strong>Clear Cache App:</strong> Clears all cached data including configuration, route, view, and application cache. Use this to resolve issues after updates or setting changes.
+                  </li>
+              </ul>
+
+              <div class="alert alert-info">
+                  <strong>Note:</strong> Running these actions will not affect user data. They only refresh the system caches and optimizations.
+              </div>
+
+
+              <h4 class="mt-4">How to Use</h4>
+              <ol>
+                  <li>Navigate to <strong>Optimize App</strong> from the admin sidebar menu.</li>
+                  <li>Click <strong>Optimize App</strong> to refresh and optimize the system.</li>
+                  <li>Click <strong>Clear Cache App</strong> if you experience stale data or issues after changes.</li>
+                  <li>Wait for the success notification—actions complete in seconds.</li>
+              </ol>
+
+              <h4 class="mt-4">Best Practices</h4>
+              <ul>
+                  <li>Optimize the app after major updates, plugin installations, or environment changes.</li>
+                  <li>Clear cache if configuration changes do not appear immediately or if you experience UI glitches.</li>
+                  <li>Routine optimization can improve response times and reduce unexpected errors.</li>
+              </ul>
+          </section>
+
+
+          <section id="idocs_profile_settings">
+              <h2>Profile Settings</h2>
+              <p class="lead">
+                  Manage your account information, security settings, and personalize your experience using the Profile Settings panel. Update your avatar, change your password, and enable 2FA for enhanced account protection.
+              </p>
+
+              <h3>Accessing Profile Settings</h3>
+              <ul>
+                  <li>Click on your profile avatar (top right corner) and select <strong>Profile Settings</strong> from the dropdown.</li>
+              </ul>
+
+              <h3>Profile Edit</h3>
+              <ul>
+                  <li>Update your <strong>avatar</strong>, <strong>name</strong>, and <strong>email address</strong>.</li>
+                  <li>Click <kbd>Update Profile</kbd> to save changes.</li>
+              </ul>
+
+              <h3>Password Change</h3>
+              <ul>
+                  <li>Navigate to <strong>Password Change</strong> in the left menu.</li>
+                  <li>Enter your <strong>new password</strong>, <strong>confirm new password</strong>, and <strong>old password</strong>.</li>
+                  <li>Click <kbd>Update Password</kbd> to save.</li>
+              </ul>
+
+              <h3>2FA Setup</h3>
+              <ol>
+                  <li>Go to <strong>2FA Setup</strong> in the Profile Menu.</li>
+                  <li>Scan the displayed QR code with your Google Authenticator app or enter the provided Secret Key manually.</li>
+                  <li>Enter the 6-digit verification code from the authenticator app.</li>
+                  <li>Click <kbd>Enable 2FA</kbd> to activate Two-Factor Authentication for your account.</li>
+              </ol>
+
+              <h4>Best Practices</h4>
+              <ul>
+                  <li>Always use a strong, unique password for your account.</li>
+                  <li>Enable Two-Factor Authentication (2FA) for maximum security.</li>
+                  <li>Update your contact information regularly to avoid losing access to your account.</li>
+              </ul>
+
+          </section>
+
+
+
+
+
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <p class="text-center">Copyright &copy; 2025 <a href="https://coevs.com/">Coevs</a>. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="assets/vendor/jquery/jquery.min.js"></script> 
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<script src="assets/js/theme.js"></script>
+</body>
+</html>
